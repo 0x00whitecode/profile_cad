@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile Card | Stage 0</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <article class="profile-card" data-testid="test-profile-card">
+    <header>
+      <h2 data-testid="test-user-name" aria-label="User Name">Christopher Joseph</h2>
+    </header>
+
+    <figure>
+      <img
+        src="fd.png"
+        alt="Profile photo of Christopher Joseph"
+        data-testid="test-user-avatar"
+      />
+      <figcaption>Senior Mobile Developer</figcaption>
+    </figure>
+
+    <p data-testid="test-user-bio">
+      I’m a passionate Mobile Developer who specializes in building high-performance React Native applications for iOS and Android. I love crafting elegant, scalable apps with seamless user experiences.
+    </p>
+
+    <p>
+      <strong>Current Time (ms): </strong>
+      <span data-testid="test-user-time" id="time"></span>
+    </p>
+
+    <nav aria-label="Social Links">
+      <ul class="social-links" data-testid="test-user-social-links">
+        <li>
+          <a
+            href="https://github.com/christopherjoseph"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-testid="test-user-social-github"
+            >GitHub</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://linkedin.com/in/christopherjoseph"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-testid="test-user-social-linkedin"
+            >LinkedIn</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://twitter.com/christopherdev"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-testid="test-user-social-twitter"
+            >Twitter</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <section aria-labelledby="hobbies-title">
+      <h3 id="hobbies-title">Hobbies</h3>
+      <ul data-testid="test-user-hobbies">
+        <li>Coding and open-source projects</li>
+        <li>UI/UX design exploration</li>
+        <li>Playing football</li>
+        <li>Music production</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="dislikes-title">
+      <h3 id="dislikes-title">Dislikes</h3>
+      <ul data-testid="test-user-dislikes">
+        <li>Unclear documentation</li>
+        <li>Poorly structured code</li>
+        <li>Slow internet connection</li>
+      </ul>
+    </section>
+  </article>
+
+  <script src="script.js"></script>
+</body>
+</html>
