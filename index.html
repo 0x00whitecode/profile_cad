@@ -7,7 +7,18 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <article class="profile-card" data-testid="test-profile-card">
+  <header class="site-header">
+    <nav aria-label="Main navigation">
+      <ul class="main-nav">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <article class="profile-card" data-testid="test-profile-card">
     <header>
       <h2 data-testid="test-user-name" aria-label="User Name">Christopher Joseph</h2>
     </header>
@@ -34,7 +45,7 @@
       <ul class="social-links" data-testid="test-user-social-links">
         <li>
           <a
-            href="https://github.com/christopherjoseph"
+            href="https://github.com/0x00whitecode"
             target="_blank"
             rel="noopener noreferrer"
             data-testid="test-user-social-github"

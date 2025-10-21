@@ -1,32 +1,63 @@
+/* Basic layout and responsiveness */
+:root {
+  --max-width: 900px;
+  --gap: 1rem;
+  --accent: #0a74da;
+  --error: #b00020;
+  --bg: #fff;
+  --muted: #666;
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   margin: 0;
-  padding: 2rem;
-  font-family: "Inter", system-ui, sans-serif;
+  padding: 1rem;
+  background: #f7f9fc;
+  color: #111;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   min-height: 100vh;
-  color: #f1f1f1;
+}
+
+main, .site-header {
+  max-width: var(--max-width);
+  width: 100%;
+}
+
+.site-header {
+  margin-bottom: 1rem;
+}
+
+.main-nav {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: var(--accent);
+  padding: 0.5rem;
+}
+
+.main-nav a[aria-current="page"] {
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 .profile-card {
-  position: relative;
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border-radius: 2rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  padding: 2rem;
-  max-width: 650px;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  gap: 1.5rem;
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
-  animation: fadeIn 1.2s ease forwards;
+  background: var(--bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(15,30,60,0.06);
+  margin-bottom: 2rem;
 }
 
 @keyframes fadeIn {
@@ -120,23 +151,112 @@ section ul {
   line-height: 1.7;
 }
 
-@media (min-width: 768px) {
+/* Form styles */
+.contact-section {
+  background: var(--bg);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(15,30,60,0.04);
+}
+
+.form-row {
+  margin-bottom: var(--gap);
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+button {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.25rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button:hover {
+  background: #0960b5;
+}
+
+button:focus,
+input:focus,
+textarea:focus {
+  outline: 3px solid rgba(10,116,218,0.15);
+  outline-offset: 2px;
+}
+
+.error {
+  color: var(--error);
+  font-size: 0.9rem;
+  min-height: 1.2em;
+  margin-top: 0.25rem;
+}
+
+.success {
+  color: #0a8020;
+  background: #e6f4ea;
+  padding: 1rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+}
+
+/* About page */
+main section {
+  background: var(--bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(15,30,60,0.04);
+}
+
+/* Responsive */
+@media (min-width: 700px) {
+  .main-nav {
+    gap: 2rem;
+  }
+  
+  .form-row {
+    max-width: 640px;
+  }
+  
+  main section {
+    padding: 2rem;
+  }
+
   .profile-card {
     flex-direction: row;
-    align-items: center;
-    gap: 2.5rem;
-    padding: 2.5rem;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    padding: 0.5rem;
+  }
+  
+  .contact-section,
+  main section {
+    padding: 1rem;
   }
 
-  figure {
-    flex: 1;
-  }
-
-  .profile-card > *:not(figure) {
-    flex: 2;
-  }
-
-  header h2 {
-    text-align: left;
+  .profile-card {
+    padding: 1rem;
   }
 }

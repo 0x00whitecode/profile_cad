@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About Me</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav aria-label="Main navigation">
+      <ul class="main-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" aria-current="page">About Me</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main data-testid="test-about-page">
+    <h2>About Me</h2>
+
+    <section aria-labelledby="bio-title" data-testid="test-about-bio">
+      <h3 id="bio-title">Bio</h3>
+      <p>
+        I'm Christopher Joseph — a Senior Mobile Developer focused on performant, accessible mobile apps using React Native. I enjoy improving developer experience and crafting UI that feels native.
+      </p>
+    </section>
+
+    <section aria-labelledby="goals-title" data-testid="test-about-goals">
+      <h3 id="goals-title">Goals in this program</h3>
+      <ul>
+        <li>Learn to build accessible, multi-page web apps</li>
+        <li>Practice form validation and UX design</li>
+        <li>Improve responsiveness and semantic markup skills</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="confidence-title" data-testid="test-about-confidence">
+      <h3 id="confidence-title">Areas of low confidence</h3>
+      <p>
+        I want to become more confident with advanced accessibility patterns, progressive enhancement, and building resilient form flows.
+      </p>
+    </section>
+
+    <section aria-labelledby="future-title" data-testid="test-about-future-note">
+      <h3 id="future-title">Note to future self</h3>
+      <p>
+        Keep iterating on accessibility, ask for feedback early, and prioritize clear documentation.
+      </p>
+    </section>
+
+    <section aria-labelledby="extra-title" data-testid="test-about-extra">
+      <h3 id="extra-title">Extra thoughts</h3>
+      <p>
+        Reflect regularly and consider writing small design system notes for recurring patterns.
+      </p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
